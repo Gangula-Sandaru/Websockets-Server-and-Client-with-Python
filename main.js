@@ -5,6 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
     createBoard(board);
 
     const websocket = new WebSocket("ws://localhost:8001/")
+    console.log(websocket) // print the incoming connections
     receiveMoves(board, websocket)
     sendMoves(board, websocket);
 
